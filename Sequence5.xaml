@@ -1,0 +1,731 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence5" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Sequence5_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Sequence5" sap:VirtualizedContainerService.HintSize="902.4000000000001,573.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="64620040-f1e7-4366-861b-2dc7f9694969" DisplayName="CV Screen Scope" sap:VirtualizedContainerService.HintSize="433.6,550.4" sap2010:WorkflowViewState.IdRef="CVScope_2" SendOnPremData="False" Version="V6">
+      <p:CVScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'UiPath Inc. is a global software company that makes robotic process automation (RPA) software. It was founded in Bucharest, Romania, by Daniel Dines and Marius Tîrcă. Its headquarters are in New York City. The company's software monitors user activity to automate repetitive front and back office tasks, including those performed using other business software such as customer relationship management or enterprise resource planning (ERP) software.' (262,457,622,146)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Ui Path' (958,500,200,50)&quot;]" DesignTimeCacheId="64620040-f1e7-4366-861b-2dc7f9694969" DesignTimeScaleFactor="1.25" DisplayName="CV Click - Text" sap:VirtualizedContainerService.HintSize="400,209.6" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_2" InformativeScreenshot="1684d04c0914aa6f265e71e8be2b677e" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+              <p:CvClickWithDescriptor.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </p:CvClickWithDescriptor.CursorPosition>
+              <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                <uc:CvDescriptor Id="cb602ffd-b4da-4e68-887f-2c78c38c0c73">
+                  <uc:CvDescriptor.Anchors>
+                    <x:Array Type="uc:CvElementDescriptor">
+                      <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="958, 500, 200, 50" ElementType="Text" Text="Ui Path" />
+                    </x:Array>
+                  </uc:CvDescriptor.Anchors>
+                  <uc:CvDescriptor.Target>
+                    <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="262, 457, 622, 146" ElementType="Text" Text="UiPath Inc. is a global software company that makes robotic process automation (RPA) software. It was founded in Bucharest, Romania, by Daniel Dines and Marius Tîrcă. Its headquarters are in New York City. The company's software monitors user activity to automate repetitive front and back office tasks, including those performed using other business software such as customer relationship management or enterprise resource planning (ERP) software." />
+                  </uc:CvDescriptor.Target>
+                </uc:CvDescriptor>
+              </p:CvClickWithDescriptor.DesignTimeDescriptor>
+              <p:CvClickWithDescriptor.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="8ea9dbcb-8ce3-4816-ae27-ad36b4807088">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </p:CvClickWithDescriptor.Target>
+            </p:CvClickWithDescriptor>
+          </Sequence>
+        </ActivityAction>
+      </p:CVScope.Body>
+      <p:CVScope.DesignTimeCacheContainer>
+        <uc:CvCacheContainer>
+          <uc:CvCacheContainer.Caches>
+            <scg:List x:TypeArguments="uc:CVCache" Capacity="4">
+              <uc:CVCache DataSent="False" DisplayName="1" Id="64620040-f1e7-4366-861b-2dc7f9694969" InformativeScreenshot="7456cdf4f00f598dc23e1d9a6d73ae9c" LogicalPosition="0, 0" OcrText="v (90 U Sten 9 (9) V ≤ 4No Clas Ui Hom (6) F S 4No New (2) M S Best S Mas New New Ui UiPa Ui Crad Prac W X + _ X en.wikipedia.org/wiki/UiPath Sign In SAP Concur Home e! Power BI-Edureka S Nokia Central - Home power bi server JAIN TEACHING S https://nokia.sharep... New Tab Ui Where to start on S... GitHub All Bookmarks WIKIPEDIA Search Wikipedia Search Donate Create account Log in ... The Free Encyclopedia UiPath 9 languages v Contents hide Article Talk Read Edit View history Tools v Appearance hide (Top) From Wikipedia, the free encyclopedia Text History &lt; The template below (Promotional) is being considered for merging. See templates for discussion to help reach a consensus. &gt; Small Products This article contains promotional content. Please help improve it by removing promotional Standard Funding ! language and inappropriate external links, and by adding encyclopedic text written from a Large References neutral point of view. (October 2024) (Learn how and when to remove this message) External links Width UiPath Inc. is a global software company that makes robotic process automation (RPA) UiPath Inc. Standard software. It was founded in Bucharest, Romania, by Daniel Dines and Marius Tîrcă. Its TM Wide headquarters are in New York City. The company's software monitors user activity to Ui Path automate repetitive front and back office tasks, including those performed using other Color (beta) business software such as customer relationship management or enterprise resource Company type Public Automatic planning (ERP) software. Traded as NYSE: PATHE (Class A) Russell 1000 component Light In December 2020, the company filed confidentially for an initial public offering, and Industry Software Dark became public on April 21, 2021.12] Founded 2005; 19 years ago in Bucharest, Romania History [edit ] Founders Daniel Dines Marius Tircă UiPath was founded in 2005 in Bucharest, Romania as DeskOver, by Romanian Headquarters One Vanderbilt New York, New York, U.S. entrepreneurs Daniel Dines and Marius Tîrcă.[3] Number of 31 countries locations" Position="0, 0" ScaleFactor="1.25" ScreenshotGuid="d59c68ac-df27-4d83-b84d-a65bb85c8714" ServerVersion="24.10.4.0">
+                <uc:CVCache.CvAnchorRelations>
+                  <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="16">
+                    <uc:AnchorRelationInfo IsTargetText="False" Target="32">
+                      <uc:AnchorRelationInfo.Anchors>
+                        <x:Array Type="x:Int32">
+                          <x:Int32>188</x:Int32>
+                        </x:Array>
+                      </uc:AnchorRelationInfo.Anchors>
+                    </uc:AnchorRelationInfo>
+                    <uc:AnchorRelationInfo IsTargetText="False" Target="47">
+                      <uc:AnchorRelationInfo.Anchors>
+                        <x:Array Type="x:Int32">
+                          <x:Int32>138</x:Int32>
+                        </x:Array>
+                      </uc:AnchorRelationInfo.Anchors>
+                    </uc:AnchorRelationInfo>
+                    <uc:AnchorRelationInfo IsTargetText="False" Target="39">
+                      <uc:AnchorRelationInfo.Anchors>
+                        <x:Array Type="x:Int32">
+                          <x:Int32>154</x:Int32>
+                        </x:Array>
+                      </uc:AnchorRelationInfo.Anchors>
+                    </uc:AnchorRelationInfo>
+                    <uc:AnchorRelationInfo IsTargetText="False" Target="37">
+                      <uc:AnchorRelationInfo.Anchors>
+                        <x:Array Type="x:Int32">
+                          <x:Int32>204</x:Int32>
+                        </x:Array>
+                      </uc:AnchorRelationInfo.Anchors>
+                    </uc:AnchorRelationInfo>
+                    <uc:AnchorRelationInfo IsTargetText="False" Target="58">
+                      <uc:AnchorRelationInfo.Anchors>
+                        <x:Array Type="x:Int32">
+                          <x:Int32>124</x:Int32>
+                        </x:Array>
+                      </uc:AnchorRelationInfo.Anchors>
+                    </uc:AnchorRelationInfo>
+                    <uc:AnchorRelationInfo IsTargetText="False" Target="21">
+                      <uc:AnchorRelationInfo.Anchors>
+                        <x:Array Type="x:Int32">
+                          <x:Int32>260</x:Int32>
+                        </x:Array>
+                      </uc:AnchorRelationInfo.Anchors>
+                    </uc:AnchorRelationInfo>
+                    <uc:AnchorRelationInfo IsTargetText="False" Target="55">
+                      <uc:AnchorRelationInfo.Anchors>
+                        <x:Array Type="x:Int32">
+                          <x:Int32>247</x:Int32>
+                        </x:Array>
+                      </uc:AnchorRelationInfo.Anchors>
+                    </uc:AnchorRelationInfo>
+                    <uc:AnchorRelationInfo IsTargetText="False" Target="51">
+                      <uc:AnchorRelationInfo.Anchors>
+                        <x:Array Type="x:Int32">
+                          <x:Int32>276</x:Int32>
+                        </x:Array>
+                      </uc:AnchorRelationInfo.Anchors>
+                    </uc:AnchorRelationInfo>
+                    <uc:AnchorRelationInfo IsTargetText="False" Target="67">
+                      <uc:AnchorRelationInfo.Anchors>
+                        <x:Array Type="x:Int32">
+                          <x:Int32>102</x:Int32>
+                        </x:Array>
+                      </uc:AnchorRelationInfo.Anchors>
+                    </uc:AnchorRelationInfo>
+                    <uc:AnchorRelationInfo IsTargetText="True" Target="254">
+                      <uc:AnchorRelationInfo.Anchors>
+                        <x:Array Type="x:Int32">
+                          <x:Int32>251</x:Int32>
+                          <x:Int32>252</x:Int32>
+                        </x:Array>
+                      </uc:AnchorRelationInfo.Anchors>
+                    </uc:AnchorRelationInfo>
+                    <uc:AnchorRelationInfo IsTargetText="True" Target="252">
+                      <uc:AnchorRelationInfo.Anchors>
+                        <x:Array Type="x:Int32">
+                          <x:Int32>244</x:Int32>
+                          <x:Int32>245</x:Int32>
+                        </x:Array>
+                      </uc:AnchorRelationInfo.Anchors>
+                    </uc:AnchorRelationInfo>
+                    <uc:AnchorRelationInfo IsTargetText="False" Target="28">
+                      <uc:AnchorRelationInfo.Anchors>
+                        <x:Array Type="x:Int32">
+                          <x:Int32>68</x:Int32>
+                          <x:Int32>69</x:Int32>
+                        </x:Array>
+                      </uc:AnchorRelationInfo.Anchors>
+                    </uc:AnchorRelationInfo>
+                    <uc:AnchorRelationInfo IsTargetText="False" Target="6">
+                      <uc:AnchorRelationInfo.Anchors>
+                        <x:Array Type="x:Int32">
+                          <x:Int32>35</x:Int32>
+                        </x:Array>
+                      </uc:AnchorRelationInfo.Anchors>
+                    </uc:AnchorRelationInfo>
+                  </scg:List>
+                </uc:CVCache.CvAnchorRelations>
+                <uc:CVCache.CvUiElements>
+                  <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="128">
+                    <uc:CvElementInfo Category="Icon" Region="1429, 50, 23, 23" />
+                    <uc:CvElementInfo Category="Icon" Region="897, 8, 20, 19" />
+                    <uc:CvElementInfo Category="Icon" Region="968, 9, 20, 19" />
+                    <uc:CvElementInfo Category="Icon" Region="613, 8, 19, 19" />
+                    <uc:CvElementInfo Category="Button" Region="1244, 4, 67, 33" />
+                    <uc:CvElementInfo Category="Icon" Region="1340, 48, 24, 24" />
+                    <uc:CvElementInfo Category="InputBox" Region="156, 45, 1168, 34" />
+                    <uc:CvElementInfo Category="ArrowButton" Region="1516, 119, 18, 19" />
+                    <uc:CvElementInfo Category="Icon" Region="557, 88, 20, 22" />
+                    <uc:CvElementInfo Category="Icon" Region="1290, 51, 23, 22" />
+                    <uc:CvElementInfo Category="Icon" Region="120, 52, 19, 20" />
+                    <uc:CvElementInfo Category="Icon" Region="1180, 8, 21, 21" />
+                    <uc:CvElementInfo Category="Icon" Region="1109, 8, 20, 20" />
+                    <uc:CvElementInfo Category="Icon" Region="1418, 90, 22, 18" />
+                    <uc:CvElementInfo Category="Icon" Region="472, 9, 19, 19" />
+                    <uc:CvElementInfo Category="Icon" Region="403, 88, 21, 20" />
+                    <uc:CvElementInfo Category="Icon" Region="400, 8, 21, 20" />
+                    <uc:CvElementInfo Category="Icon" Region="309, 140, 24, 24" />
+                    <uc:CvElementInfo Category="Icon" Region="1464, 48, 26, 24" />
+                    <uc:CvElementInfo Category="Icon" Region="1039, 8, 20, 20" />
+                    <uc:CvElementInfo Category="Icon" Region="79, 126, 57, 52" />
+                    <uc:CvElementInfo Category="RadioButton" Region="1248, 606, 24, 24" />
+                    <uc:CvElementInfo Category="Icon" Region="381, 379, 43, 42" />
+                    <uc:CvElementInfo Category="Icon" Region="115, 8, 22, 21" />
+                    <uc:CvElementInfo Category="Icon" Region="1038, 89, 20, 20" />
+                    <uc:CvElementInfo Category="Icon" Region="256, 8, 21, 20" />
+                    <uc:CvElementInfo Category="Icon" Region="756, 8, 21, 21" />
+                    <uc:CvElementInfo Category="Icon" Region="954, 89, 20, 19" />
+                    <uc:CvElementInfo Category="InputBox" Region="303, 136, 413, 33" />
+                    <uc:CvElementInfo Category="Icon" Region="825, 8, 21, 20" />
+                    <uc:CvElementInfo Category="Icon" Region="800, 88, 22, 21" />
+                    <uc:CvElementInfo Category="Icon" Region="328, 9, 21, 20" />
+                    <uc:CvElementInfo Category="RadioButton" Region="1249, 468, 24, 24" />
+                    <uc:CvElementInfo Category="Icon" Region="60, 89, 20, 20" />
+                    <uc:CvElementInfo Category="ArrowButton" Region="1196, 220, 19, 17" />
+                    <uc:CvElementInfo Category="Icon" Region="84, 52, 19, 19" />
+                    <uc:CvElementInfo Category="Icon" Region="677, 88, 21, 22" />
+                    <uc:CvElementInfo Category="RadioButton" Region="1248, 500, 24, 25" />
+                    <uc:CvElementInfo Category="Icon" Region="188, 10, 18, 18" />
+                    <uc:CvElementInfo Category="RadioButton" Region="1248, 395, 24, 24" />
+                    <uc:CvElementInfo Category="CloseButton" Region="1286, 10, 16, 16" />
+                    <uc:CvElementInfo Category="Icon" Region="1504, 49, 19, 24" />
+                    <uc:CvElementInfo Category="Icon" Region="159, 48, 25, 24" />
+                    <uc:CvElementInfo Category="Icon" Region="541, 8, 21, 20" />
+                    <uc:CvElementInfo Category="Icon" Region="136, 89, 20, 20" />
+                    <uc:CvElementInfo Category="Icon" Region="39, 141, 27, 23" />
+                    <uc:CvElementInfo Category="Icon" Region="1394, 52, 22, 19" />
+                    <uc:CvElementInfo Category="RadioButton" Region="1248, 364, 24, 24" />
+                    <uc:CvElementInfo Category="Icon" Region="12, 88, 23, 22" />
+                    <uc:CvElementInfo Category="Icon" Region="44, 9, 21, 18" />
+                    <uc:CvElementInfo Category="CloseButton" Region="1503, 9, 18, 18" />
+                    <uc:CvElementInfo Category="RadioButton" Region="1248, 638, 24, 24" />
+                    <uc:CvElementInfo Category="Icon" Region="684, 11, 20, 16" />
+                    <uc:CvElementInfo Category="ArrowButton" Region="1517, 804, 18, 19" />
+                    <uc:CvElementInfo Category="Icon" Region="1192, 88, 21, 21" />
+                    <uc:CvElementInfo Category="RadioButton" Region="1248, 574, 25, 25" />
+                    <uc:CvElementInfo Category="Icon" Region="1073, 219, 26, 23" />
+                    <uc:CvElementInfo Category="Icon" Region="1320, 9, 19, 18" />
+                    <uc:CvElementInfo Category="RadioButton" Region="1248, 331, 24, 25" />
+                    <uc:CvElementInfo Category="MinimizeButton" Region="1410, 9, 21, 18" />
+                    <uc:CvElementInfo Category="Button" Region="709, 135, 71, 34" />
+                    <uc:CvElementInfo Category="MaximizeButton" Region="1456, 9, 19, 18" />
+                    <uc:CvElementInfo Category="Icon" Region="46, 51, 21, 20" />
+                    <uc:CvElementInfo Category="Icon" Region="11, 52, 20, 19" />
+                    <uc:CvElementInfo Category="Icon" Region="1446, 143, 29, 20" />
+                    <uc:CvElementInfo Category="ArrowButton" Region="6, 4, 29, 28" />
+                    <uc:CvElementInfo Category="Icon" Region="271, 89, 22, 21" />
+                    <uc:CvElementInfo Category="InputBox" Region="1248, 291, 171, 31" />
+                    <uc:CvElementInfo Category="Button" Region="1342, 255, 40, 24" />
+                    <uc:CvElementInfo Category="Button" Region="131, 255, 41, 24" />
+                    <uc:CvElementInfo Category="Icon" Region="1252, 10, 20, 18" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="673, 7, 73, 27" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="367, 356, 750, 87" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="816, 6, 71, 28" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="248, 5, 71, 29" />
+                    <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="947, 489, 76, 76" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="179, 5, 67, 28" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="532, 6, 72, 28" />
+                    <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1248, 363, 25, 25" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="888, 6, 71, 28" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="1172, 3, 70, 35" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="320, 6, 68, 29" />
+                    <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="10, 52, 21, 20" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="1248, 429, 171, 29" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="1032, 6, 68, 27" />
+                    <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="45, 51, 22, 21" />
+                    <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1248, 606, 25, 25" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="269, 700, 623, 40" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="604, 6, 70, 28" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="960, 7, 68, 28" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="36, 4, 70, 29" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="1343, 256, 40, 24" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="749, 4, 65, 30" />
+                    <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="708, 12, 16, 16" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="131, 256, 41, 24" />
+                    <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1248, 468, 25, 24" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="1103, 7, 68, 28" />
+                    <uc:CvElementInfo Category="CloseButton" Confidence="Runtime" Region="1252, 10, 20, 19" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="4, 4, 32, 30" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="108, 5, 68, 29" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="301, 256, 705, 32" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="1249, 535, 169, 29" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="242, 457, 659, 277" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="1116, 332, 95, 23" />
+                    <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="5, 4, 31, 28" />
+                    <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1422, 144, 17, 17" />
+                    <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1248, 574, 26, 25" />
+                    <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1457, 9, 17, 17" />
+                    <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1342, 255, 41, 24" />
+                    <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1248, 331, 25, 25" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="274, 212, 937, 36" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="1192, 85, 208, 28" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="393, 7, 67, 28" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="258, 254, 49, 32" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="540, 9, 21, 20" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="969, 255, 44, 31" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="1149, 253, 64, 32" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="265, 332, 104, 23" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="276, 331, 938, 24" />
+                    <uc:CvElementInfo Category="ArrowButton" Region="1195, 260, 19, 17" />
+                    <uc:CvElementInfo Category="ArrowButton" Region="1109, 337, 13, 15" />
+                    <uc:CvElementInfo Category="ArrowButton" Region="352, 337, 12, 15" />
+                  </scg:List>
+                </uc:CVCache.CvUiElements>
+                <uc:CVCache.OcrTexts>
+                  <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="330">
+                    <uc:OcrTextInfo Region="13, 14, 10, 8" Text="v" />
+                    <uc:OcrTextInfo Region="70, 13, 17, 12" Text="(90" />
+                    <uc:OcrTextInfo Region="90, 16, 4, 8" Text="U" />
+                    <uc:OcrTextInfo Region="141, 13, 24, 12" Text="Sten" />
+                    <uc:OcrTextInfo Region="194, 14, 5, 8" Text="9" />
+                    <uc:OcrTextInfo Region="212, 13, 14, 12" Text="(9)" />
+                    <uc:OcrTextInfo Region="228, 13, 8, 12" Text="V" />
+                    <uc:OcrTextInfo Region="260, 13, 6, 9" Text="≤" />
+                    <uc:OcrTextInfo Region="282, 13, 24, 12" Text="4No" />
+                    <uc:OcrTextInfo Region="354, 13, 24, 10" Text="Clas" />
+                    <uc:OcrTextInfo Region="404, 12, 12, 12" Text="Ui" />
+                    <uc:OcrTextInfo Region="425, 13, 24, 10" Text="Hom" />
+                    <uc:OcrTextInfo Region="496, 13, 14, 12" Text="(6)" />
+                    <uc:OcrTextInfo Region="513, 13, 6, 10" Text="F" />
+                    <uc:OcrTextInfo Region="544, 14, 8, 8" Text="S" />
+                    <uc:OcrTextInfo Region="566, 13, 24, 12" Text="4No" />
+                    <uc:OcrTextInfo Region="638, 13, 24, 12" Text="New" />
+                    <uc:OcrTextInfo Region="709, 13, 14, 12" Text="(2)" />
+                    <uc:OcrTextInfo Region="726, 13, 8, 10" Text="M" />
+                    <uc:OcrTextInfo Region="757, 10, 16, 16" Text="S" />
+                    <uc:OcrTextInfo Region="780, 13, 22, 12" Text="Best" />
+                    <uc:OcrTextInfo Region="828, 14, 8, 8" Text="S" />
+                    <uc:OcrTextInfo Region="852, 13, 24, 12" Text="Mas" />
+                    <uc:OcrTextInfo Region="922, 13, 24, 12" Text="New" />
+                    <uc:OcrTextInfo Region="993, 13, 24, 12" Text="New" />
+                    <uc:OcrTextInfo Region="1042, 12, 12, 12" Text="Ui" />
+                    <uc:OcrTextInfo Region="1064, 13, 24, 12" Text="UiPa" />
+                    <uc:OcrTextInfo Region="1113, 12, 12, 12" Text="Ui" />
+                    <uc:OcrTextInfo Region="1136, 13, 24, 12" Text="Crad" />
+                    <uc:OcrTextInfo Region="1206, 13, 24, 12" Text="Prac" />
+                    <uc:OcrTextInfo Region="1254, 13, 16, 12" Text="W" />
+                    <uc:OcrTextInfo Region="1288, 13, 10, 10" Text="X" />
+                    <uc:OcrTextInfo Region="1324, 12, 12, 12" Text="+" />
+                    <uc:OcrTextInfo Region="1414, 8, 12, 13" Text="_" />
+                    <uc:OcrTextInfo Region="1505, 12, 12, 13" Text="X" />
+                    <uc:OcrTextInfo Region="192, 56, 176, 16" Text="en.wikipedia.org/wiki/UiPath" />
+                    <uc:OcrTextInfo Region="84, 93, 24, 13" Text="Sign" />
+                    <uc:OcrTextInfo Region="110, 93, 12, 12" Text="In" />
+                    <uc:OcrTextInfo Region="160, 93, 22, 12" Text="SAP" />
+                    <uc:OcrTextInfo Region="184, 93, 40, 12" Text="Concur" />
+                    <uc:OcrTextInfo Region="224, 93, 33, 12" Text="Home" />
+                    <uc:OcrTextInfo Region="272, 90, 20, 17" Text="e!" />
+                    <uc:OcrTextInfo Region="296, 93, 33, 12" Text="Power" />
+                    <uc:OcrTextInfo Region="332, 93, 57, 12" Text="BI-Edureka" />
+                    <uc:OcrTextInfo Region="406, 96, 6, 8" Text="S" />
+                    <uc:OcrTextInfo Region="428, 93, 32, 12" Text="Nokia" />
+                    <uc:OcrTextInfo Region="461, 93, 38, 12" Text="Central" />
+                    <uc:OcrTextInfo Region="504, 94, 4, 10" Text="-" />
+                    <uc:OcrTextInfo Region="512, 93, 32, 12" Text="Home" />
+                    <uc:OcrTextInfo Region="581, 96, 34, 12" Text="power" />
+                    <uc:OcrTextInfo Region="617, 93, 12, 10" Text="bi" />
+                    <uc:OcrTextInfo Region="630, 96, 33, 9" Text="server" />
+                    <uc:OcrTextInfo Region="701, 93, 24, 12" Text="JAIN" />
+                    <uc:OcrTextInfo Region="728, 93, 58, 12" Text="TEACHING" />
+                    <uc:OcrTextInfo Region="802, 96, 6, 8" Text="S" />
+                    <uc:OcrTextInfo Region="824, 93, 116, 13" Text="https://nokia.sharep..." />
+                    <uc:OcrTextInfo Region="977, 93, 25, 12" Text="New" />
+                    <uc:OcrTextInfo Region="1004, 93, 18, 12" Text="Tab" />
+                    <uc:OcrTextInfo Region="1041, 93, 12, 12" Text="Ui" />
+                    <uc:OcrTextInfo Region="1061, 93, 36, 12" Text="Where" />
+                    <uc:OcrTextInfo Region="1100, 94, 12, 10" Text="to" />
+                    <uc:OcrTextInfo Region="1113, 94, 25, 10" Text="start" />
+                    <uc:OcrTextInfo Region="1140, 96, 14, 8" Text="on" />
+                    <uc:OcrTextInfo Region="1157, 93, 16, 12" Text="S..." />
+                    <uc:OcrTextInfo Region="1216, 93, 38, 12" Text="GitHub" />
+                    <uc:OcrTextInfo Region="1444, 93, 14, 12" Text="All" />
+                    <uc:OcrTextInfo Region="1461, 93, 60, 12" Text="Bookmarks" />
+                    <uc:OcrTextInfo Region="141, 132, 122, 20" Text="WIKIPEDIA" />
+                    <uc:OcrTextInfo Region="340, 145, 44, 12" Text="Search" />
+                    <uc:OcrTextInfo Region="386, 145, 62, 16" Text="Wikipedia" />
+                    <uc:OcrTextInfo Region="720, 145, 48, 12" Text="Search" />
+                    <uc:OcrTextInfo Region="1241, 145, 46, 13" Text="Donate" />
+                    <uc:OcrTextInfo Region="1294, 145, 44, 12" Text="Create" />
+                    <uc:OcrTextInfo Region="1340, 145, 50, 12" Text="account" />
+                    <uc:OcrTextInfo Region="1397, 145, 24, 16" Text="Log" />
+                    <uc:OcrTextInfo Region="1424, 145, 12, 12" Text="in" />
+                    <uc:OcrTextInfo Region="1449, 140, 20, 16" Text="..." />
+                    <uc:OcrTextInfo Region="144, 157, 20, 10" Text="The" />
+                    <uc:OcrTextInfo Region="165, 157, 24, 10" Text="Free" />
+                    <uc:OcrTextInfo Region="190, 156, 70, 14" Text="Encyclopedia" />
+                    <uc:OcrTextInfo Region="262, 217, 89, 24" Text="UiPath" />
+                    <uc:OcrTextInfo Region="1106, 222, 8, 12" Text="9" />
+                    <uc:OcrTextInfo Region="1118, 222, 70, 16" Text="languages" />
+                    <uc:OcrTextInfo Region="1198, 225, 12, 8" Text="v" />
+                    <uc:OcrTextInfo Region="58, 260, 61, 13" Text="Contents" />
+                    <uc:OcrTextInfo Region="138, 261, 24, 10" Text="hide" />
+                    <uc:OcrTextInfo Region="262, 262, 40, 12" Text="Article" />
+                    <uc:OcrTextInfo Region="317, 262, 26, 12" Text="Talk" />
+                    <uc:OcrTextInfo Region="974, 262, 33, 12" Text="Read" />
+                    <uc:OcrTextInfo Region="1024, 262, 24, 12" Text="Edit" />
+                    <uc:OcrTextInfo Region="1064, 262, 32, 12" Text="View" />
+                    <uc:OcrTextInfo Region="1097, 262, 42, 16" Text="history" />
+                    <uc:OcrTextInfo Region="1154, 262, 34, 12" Text="Tools" />
+                    <uc:OcrTextInfo Region="1198, 265, 12, 8" Text="v" />
+                    <uc:OcrTextInfo Region="1249, 260, 82, 16" Text="Appearance" />
+                    <uc:OcrTextInfo Region="1350, 261, 24, 12" Text="hide" />
+                    <uc:OcrTextInfo Region="58, 298, 34, 16" Text="(Top)" />
+                    <uc:OcrTextInfo Region="262, 300, 33, 12" Text="From" />
+                    <uc:OcrTextInfo Region="298, 300, 65, 16" Text="Wikipedia," />
+                    <uc:OcrTextInfo Region="368, 300, 20, 12" Text="the" />
+                    <uc:OcrTextInfo Region="390, 300, 25, 12" Text="free" />
+                    <uc:OcrTextInfo Region="418, 300, 82, 16" Text="encyclopedia" />
+                    <uc:OcrTextInfo Region="1249, 298, 28, 13" Text="Text" />
+                    <uc:OcrTextInfo Region="58, 328, 45, 16" Text="History" />
+                    <uc:OcrTextInfo Region="356, 340, 5, 8" Text="&lt;" />
+                    <uc:OcrTextInfo Region="364, 337, 24, 12" Text="The" />
+                    <uc:OcrTextInfo Region="390, 337, 53, 14" Text="template" />
+                    <uc:OcrTextInfo Region="446, 337, 37, 12" Text="below" />
+                    <uc:OcrTextInfo Region="486, 337, 81, 14" Text="(Promotional)" />
+                    <uc:OcrTextInfo Region="572, 338, 10, 12" Text="is" />
+                    <uc:OcrTextInfo Region="584, 337, 34, 14" Text="being" />
+                    <uc:OcrTextInfo Region="622, 337, 68, 12" Text="considered" />
+                    <uc:OcrTextInfo Region="692, 337, 17, 12" Text="for" />
+                    <uc:OcrTextInfo Region="712, 337, 52, 14" Text="merging." />
+                    <uc:OcrTextInfo Region="768, 337, 25, 12" Text="See" />
+                    <uc:OcrTextInfo Region="796, 337, 60, 14" Text="templates" />
+                    <uc:OcrTextInfo Region="858, 337, 18, 12" Text="for" />
+                    <uc:OcrTextInfo Region="880, 337, 64, 12" Text="discussion" />
+                    <uc:OcrTextInfo Region="945, 338, 13, 10" Text="to" />
+                    <uc:OcrTextInfo Region="961, 337, 26, 14" Text="help" />
+                    <uc:OcrTextInfo Region="990, 337, 36, 12" Text="reach" />
+                    <uc:OcrTextInfo Region="1028, 340, 9, 9" Text="a" />
+                    <uc:OcrTextInfo Region="1040, 340, 68, 10" Text="consensus." />
+                    <uc:OcrTextInfo Region="1112, 340, 5, 8" Text="&gt;" />
+                    <uc:OcrTextInfo Region="1278, 336, 36, 13" Text="Small" />
+                    <uc:OcrTextInfo Region="58, 357, 56, 12" Text="Products" />
+                    <uc:OcrTextInfo Region="437, 368, 32, 13" Text="This" />
+                    <uc:OcrTextInfo Region="472, 368, 44, 13" Text="article" />
+                    <uc:OcrTextInfo Region="520, 368, 66, 13" Text="contains" />
+                    <uc:OcrTextInfo Region="590, 368, 92, 17" Text="promotional" />
+                    <uc:OcrTextInfo Region="688, 368, 62, 13" Text="content." />
+                    <uc:OcrTextInfo Region="753, 368, 49, 13" Text="Please" />
+                    <uc:OcrTextInfo Region="808, 368, 32, 17" Text="help" />
+                    <uc:OcrTextInfo Region="841, 368, 57, 17" Text="improve" />
+                    <uc:OcrTextInfo Region="904, 368, 9, 13" Text="it" />
+                    <uc:OcrTextInfo Region="916, 368, 18, 17" Text="by" />
+                    <uc:OcrTextInfo Region="937, 368, 65, 17" Text="removing" />
+                    <uc:OcrTextInfo Region="1008, 368, 84, 17" Text="promotional" />
+                    <uc:OcrTextInfo Region="1278, 368, 57, 13" Text="Standard" />
+                    <uc:OcrTextInfo Region="58, 385, 52, 16" Text="Funding" />
+                    <uc:OcrTextInfo Region="397, 388, 9, 26" Text="!" />
+                    <uc:OcrTextInfo Region="438, 393, 66, 16" Text="language" />
+                    <uc:OcrTextInfo Region="508, 393, 26, 13" Text="and" />
+                    <uc:OcrTextInfo Region="540, 392, 93, 17" Text="inappropriate" />
+                    <uc:OcrTextInfo Region="637, 393, 57, 13" Text="external" />
+                    <uc:OcrTextInfo Region="698, 392, 36, 16" Text="links," />
+                    <uc:OcrTextInfo Region="740, 393, 28, 13" Text="and" />
+                    <uc:OcrTextInfo Region="770, 392, 18, 17" Text="by" />
+                    <uc:OcrTextInfo Region="792, 392, 48, 17" Text="adding" />
+                    <uc:OcrTextInfo Region="844, 393, 94, 16" Text="encyclopedic" />
+                    <uc:OcrTextInfo Region="941, 393, 28, 13" Text="text" />
+                    <uc:OcrTextInfo Region="970, 393, 48, 13" Text="written" />
+                    <uc:OcrTextInfo Region="1022, 392, 33, 14" Text="from" />
+                    <uc:OcrTextInfo Region="1060, 396, 10, 12" Text="a" />
+                    <uc:OcrTextInfo Region="1278, 400, 36, 16" Text="Large" />
+                    <uc:OcrTextInfo Region="58, 414, 72, 12" Text="References" />
+                    <uc:OcrTextInfo Region="437, 418, 50, 14" Text="neutral" />
+                    <uc:OcrTextInfo Region="492, 420, 36, 16" Text="point" />
+                    <uc:OcrTextInfo Region="530, 418, 16, 14" Text="of" />
+                    <uc:OcrTextInfo Region="548, 418, 36, 14" Text="view." />
+                    <uc:OcrTextInfo Region="588, 418, 65, 17" Text="(October" />
+                    <uc:OcrTextInfo Region="656, 418, 41, 17" Text="2024)" />
+                    <uc:OcrTextInfo Region="701, 418, 40, 17" Text="(Learn" />
+                    <uc:OcrTextInfo Region="744, 421, 26, 12" Text="how" />
+                    <uc:OcrTextInfo Region="773, 420, 24, 12" Text="and" />
+                    <uc:OcrTextInfo Region="800, 420, 33, 12" Text="when" />
+                    <uc:OcrTextInfo Region="836, 421, 12, 12" Text="to" />
+                    <uc:OcrTextInfo Region="850, 424, 46, 9" Text="remove" />
+                    <uc:OcrTextInfo Region="900, 421, 22, 10" Text="this" />
+                    <uc:OcrTextInfo Region="925, 418, 60, 17" Text="message)" />
+                    <uc:OcrTextInfo Region="58, 444, 52, 12" Text="External" />
+                    <uc:OcrTextInfo Region="113, 444, 29, 12" Text="links" />
+                    <uc:OcrTextInfo Region="1249, 437, 37, 12" Text="Width" />
+                    <uc:OcrTextInfo Region="262, 458, 50, 13" Text="UiPath" />
+                    <uc:OcrTextInfo Region="317, 458, 28, 14" Text="Inc." />
+                    <uc:OcrTextInfo Region="349, 458, 12, 14" Text="is" />
+                    <uc:OcrTextInfo Region="365, 461, 9, 12" Text="a" />
+                    <uc:OcrTextInfo Region="378, 458, 44, 17" Text="global" />
+                    <uc:OcrTextInfo Region="425, 458, 61, 14" Text="software" />
+                    <uc:OcrTextInfo Region="490, 461, 65, 14" Text="company" />
+                    <uc:OcrTextInfo Region="560, 458, 29, 14" Text="that" />
+                    <uc:OcrTextInfo Region="592, 458, 48, 14" Text="makes" />
+                    <uc:OcrTextInfo Region="642, 458, 50, 14" Text="robotic" />
+                    <uc:OcrTextInfo Region="696, 461, 56, 14" Text="process" />
+                    <uc:OcrTextInfo Region="756, 458, 80, 14" Text="automation" />
+                    <uc:OcrTextInfo Region="840, 457, 44, 18" Text="(RPA)" />
+                    <uc:OcrTextInfo Region="1010, 457, 56, 16" Text="UiPath" />
+                    <uc:OcrTextInfo Region="1070, 457, 32, 14" Text="Inc." />
+                    <uc:OcrTextInfo Region="1278, 473, 57, 12" Text="Standard" />
+                    <uc:OcrTextInfo Region="262, 484, 64, 14" Text="software." />
+                    <uc:OcrTextInfo Region="332, 484, 9, 14" Text="It" />
+                    <uc:OcrTextInfo Region="344, 486, 29, 12" Text="was" />
+                    <uc:OcrTextInfo Region="377, 484, 58, 14" Text="founded" />
+                    <uc:OcrTextInfo Region="440, 484, 13, 13" Text="in" />
+                    <uc:OcrTextInfo Region="457, 484, 76, 17" Text="Bucharest," />
+                    <uc:OcrTextInfo Region="538, 484, 68, 17" Text="Romania," />
+                    <uc:OcrTextInfo Region="612, 484, 17, 18" Text="by" />
+                    <uc:OcrTextInfo Region="632, 484, 46, 14" Text="Daniel" />
+                    <uc:OcrTextInfo Region="682, 484, 41, 14" Text="Dines" />
+                    <uc:OcrTextInfo Region="728, 484, 28, 13" Text="and" />
+                    <uc:OcrTextInfo Region="758, 484, 49, 14" Text="Marius" />
+                    <uc:OcrTextInfo Region="810, 484, 41, 16" Text="Tîrcă." />
+                    <uc:OcrTextInfo Region="856, 484, 17, 13" Text="Its" />
+                    <uc:OcrTextInfo Region="1153, 504, 14, 8" Text="TM" />
+                    <uc:OcrTextInfo Region="1277, 505, 34, 12" Text="Wide" />
+                    <uc:OcrTextInfo Region="262, 509, 94, 17" Text="headquarters" />
+                    <uc:OcrTextInfo Region="360, 512, 24, 12" Text="are" />
+                    <uc:OcrTextInfo Region="388, 509, 13, 14" Text="in" />
+                    <uc:OcrTextInfo Region="406, 509, 32, 14" Text="New" />
+                    <uc:OcrTextInfo Region="441, 509, 33, 14" Text="York" />
+                    <uc:OcrTextInfo Region="477, 509, 32, 17" Text="City." />
+                    <uc:OcrTextInfo Region="512, 509, 28, 14" Text="The" />
+                    <uc:OcrTextInfo Region="544, 509, 76, 17" Text="company's" />
+                    <uc:OcrTextInfo Region="624, 509, 61, 14" Text="software" />
+                    <uc:OcrTextInfo Region="690, 509, 61, 13" Text="monitors" />
+                    <uc:OcrTextInfo Region="756, 512, 32, 12" Text="user" />
+                    <uc:OcrTextInfo Region="792, 509, 49, 17" Text="activity" />
+                    <uc:OcrTextInfo Region="844, 510, 14, 13" Text="to" />
+                    <uc:OcrTextInfo Region="958, 500, 53, 50" Text="Ui" />
+                    <uc:OcrTextInfo Region="1030, 504, 128, 45" Text="Path" />
+                    <uc:OcrTextInfo Region="262, 536, 68, 14" Text="automate" />
+                    <uc:OcrTextInfo Region="333, 536, 65, 17" Text="repetitive" />
+                    <uc:OcrTextInfo Region="402, 534, 33, 14" Text="front" />
+                    <uc:OcrTextInfo Region="440, 536, 28, 14" Text="and" />
+                    <uc:OcrTextInfo Region="470, 534, 36, 16" Text="back" />
+                    <uc:OcrTextInfo Region="508, 536, 38, 13" Text="office" />
+                    <uc:OcrTextInfo Region="550, 536, 42, 16" Text="tasks," />
+                    <uc:OcrTextInfo Region="597, 534, 64, 18" Text="including" />
+                    <uc:OcrTextInfo Region="664, 536, 40, 14" Text="those" />
+                    <uc:OcrTextInfo Region="708, 534, 73, 17" Text="performed" />
+                    <uc:OcrTextInfo Region="785, 536, 40, 17" Text="using" />
+                    <uc:OcrTextInfo Region="828, 536, 38, 13" Text="other" />
+                    <uc:OcrTextInfo Region="1250, 542, 34, 12" Text="Color" />
+                    <uc:OcrTextInfo Region="1288, 542, 37, 16" Text="(beta)" />
+                    <uc:OcrTextInfo Region="262, 560, 64, 14" Text="business" />
+                    <uc:OcrTextInfo Region="329, 560, 61, 14" Text="software" />
+                    <uc:OcrTextInfo Region="394, 560, 36, 14" Text="such" />
+                    <uc:OcrTextInfo Region="432, 564, 18, 12" Text="as" />
+                    <uc:OcrTextInfo Region="454, 561, 68, 13" Text="customer" />
+                    <uc:OcrTextInfo Region="525, 560, 82, 17" Text="relationship" />
+                    <uc:OcrTextInfo Region="612, 561, 94, 16" Text="management" />
+                    <uc:OcrTextInfo Region="708, 564, 16, 12" Text="or" />
+                    <uc:OcrTextInfo Region="728, 560, 72, 17" Text="enterprise" />
+                    <uc:OcrTextInfo Region="804, 564, 62, 12" Text="resource" />
+                    <uc:OcrTextInfo Region="908, 573, 65, 16" Text="Company" />
+                    <uc:OcrTextInfo Region="976, 573, 30, 16" Text="type" />
+                    <uc:OcrTextInfo Region="1020, 572, 40, 13" Text="Public" />
+                    <uc:OcrTextInfo Region="1277, 580, 64, 12" Text="Automatic" />
+                    <uc:OcrTextInfo Region="262, 586, 60, 17" Text="planning" />
+                    <uc:OcrTextInfo Region="328, 585, 44, 18" Text="(ERP)" />
+                    <uc:OcrTextInfo Region="376, 586, 65, 14" Text="software." />
+                    <uc:OcrTextInfo Region="908, 600, 48, 12" Text="Traded" />
+                    <uc:OcrTextInfo Region="957, 601, 17, 10" Text="as" />
+                    <uc:OcrTextInfo Region="1020, 597, 42, 13" Text="NYSE:" />
+                    <uc:OcrTextInfo Region="1066, 597, 48, 12" Text="PATHE" />
+                    <uc:OcrTextInfo Region="1120, 597, 40, 16" Text="(Class" />
+                    <uc:OcrTextInfo Region="1161, 597, 16, 16" Text="A)" />
+                    <uc:OcrTextInfo Region="1020, 616, 46, 12" Text="Russell" />
+                    <uc:OcrTextInfo Region="1072, 616, 32, 13" Text="1000" />
+                    <uc:OcrTextInfo Region="1104, 616, 72, 16" Text="component" />
+                    <uc:OcrTextInfo Region="1278, 612, 32, 16" Text="Light" />
+                    <uc:OcrTextInfo Region="262, 628, 13, 14" Text="In" />
+                    <uc:OcrTextInfo Region="281, 628, 74, 16" Text="December" />
+                    <uc:OcrTextInfo Region="358, 628, 40, 17" Text="2020," />
+                    <uc:OcrTextInfo Region="402, 628, 24, 13" Text="the" />
+                    <uc:OcrTextInfo Region="429, 632, 66, 14" Text="company" />
+                    <uc:OcrTextInfo Region="498, 628, 30, 16" Text="filed" />
+                    <uc:OcrTextInfo Region="532, 628, 93, 18" Text="confidentially" />
+                    <uc:OcrTextInfo Region="629, 628, 20, 13" Text="for" />
+                    <uc:OcrTextInfo Region="652, 632, 20, 10" Text="an" />
+                    <uc:OcrTextInfo Region="674, 628, 37, 14" Text="initial" />
+                    <uc:OcrTextInfo Region="716, 628, 42, 17" Text="public" />
+                    <uc:OcrTextInfo Region="762, 628, 57, 18" Text="offering," />
+                    <uc:OcrTextInfo Region="824, 628, 26, 14" Text="and" />
+                    <uc:OcrTextInfo Region="908, 641, 57, 16" Text="Industry" />
+                    <uc:OcrTextInfo Region="1020, 640, 56, 13" Text="Software" />
+                    <uc:OcrTextInfo Region="1278, 644, 32, 12" Text="Dark" />
+                    <uc:OcrTextInfo Region="262, 653, 57, 14" Text="became" />
+                    <uc:OcrTextInfo Region="324, 653, 44, 17" Text="public" />
+                    <uc:OcrTextInfo Region="369, 656, 18, 12" Text="on" />
+                    <uc:OcrTextInfo Region="390, 653, 33, 17" Text="April" />
+                    <uc:OcrTextInfo Region="428, 653, 22, 16" Text="21," />
+                    <uc:OcrTextInfo Region="453, 649, 56, 20" Text="2021.12]" />
+                    <uc:OcrTextInfo Region="908, 666, 60, 13" Text="Founded" />
+                    <uc:OcrTextInfo Region="1020, 665, 36, 14" Text="2005;" />
+                    <uc:OcrTextInfo Region="1060, 665, 16, 13" Text="19" />
+                    <uc:OcrTextInfo Region="1078, 668, 36, 13" Text="years" />
+                    <uc:OcrTextInfo Region="1116, 668, 25, 14" Text="ago" />
+                    <uc:OcrTextInfo Region="1144, 665, 12, 12" Text="in" />
+                    <uc:OcrTextInfo Region="1020, 684, 68, 14" Text="Bucharest," />
+                    <uc:OcrTextInfo Region="1092, 684, 56, 12" Text="Romania" />
+                    <uc:OcrTextInfo Region="262, 708, 81, 26" Text="History" />
+                    <uc:OcrTextInfo Region="356, 716, 30, 14" Text="[edit" />
+                    <uc:OcrTextInfo Region="386, 716, 4, 14" Text="]" />
+                    <uc:OcrTextInfo Region="908, 709, 64, 13" Text="Founders" />
+                    <uc:OcrTextInfo Region="1020, 708, 40, 13" Text="Daniel" />
+                    <uc:OcrTextInfo Region="1064, 708, 36, 13" Text="Dines" />
+                    <uc:OcrTextInfo Region="1020, 726, 44, 12" Text="Marius" />
+                    <uc:OcrTextInfo Region="1065, 726, 33, 12" Text="Tircă" />
+                    <uc:OcrTextInfo Region="262, 753, 48, 13" Text="UiPath" />
+                    <uc:OcrTextInfo Region="314, 756, 29, 12" Text="was" />
+                    <uc:OcrTextInfo Region="348, 752, 58, 13" Text="founded" />
+                    <uc:OcrTextInfo Region="409, 753, 13, 13" Text="in" />
+                    <uc:OcrTextInfo Region="426, 752, 37, 14" Text="2005" />
+                    <uc:OcrTextInfo Region="466, 753, 13, 13" Text="in" />
+                    <uc:OcrTextInfo Region="484, 752, 76, 16" Text="Bucharest," />
+                    <uc:OcrTextInfo Region="565, 753, 64, 13" Text="Romania" />
+                    <uc:OcrTextInfo Region="632, 756, 20, 10" Text="as" />
+                    <uc:OcrTextInfo Region="654, 752, 74, 16" Text="DeskOver," />
+                    <uc:OcrTextInfo Region="733, 752, 18, 17" Text="by" />
+                    <uc:OcrTextInfo Region="756, 752, 73, 14" Text="Romanian" />
+                    <uc:OcrTextInfo Region="908, 752, 92, 16" Text="Headquarters" />
+                    <uc:OcrTextInfo Region="1020, 750, 28, 12" Text="One" />
+                    <uc:OcrTextInfo Region="1050, 750, 64, 12" Text="Vanderbilt" />
+                    <uc:OcrTextInfo Region="1020, 768, 29, 12" Text="New" />
+                    <uc:OcrTextInfo Region="1052, 768, 32, 16" Text="York," />
+                    <uc:OcrTextInfo Region="1088, 768, 29, 12" Text="New" />
+                    <uc:OcrTextInfo Region="1118, 768, 32, 16" Text="York," />
+                    <uc:OcrTextInfo Region="1154, 768, 28, 13" Text="U.S." />
+                    <uc:OcrTextInfo Region="262, 780, 100, 16" Text="entrepreneurs" />
+                    <uc:OcrTextInfo Region="366, 778, 45, 14" Text="Daniel" />
+                    <uc:OcrTextInfo Region="416, 778, 41, 14" Text="Dines" />
+                    <uc:OcrTextInfo Region="461, 778, 28, 14" Text="and" />
+                    <uc:OcrTextInfo Region="493, 778, 48, 14" Text="Marius" />
+                    <uc:OcrTextInfo Region="544, 773, 57, 20" Text="Tîrcă.[3]" />
+                    <uc:OcrTextInfo Region="908, 793, 54, 12" Text="Number" />
+                    <uc:OcrTextInfo Region="964, 792, 16, 12" Text="of" />
+                    <uc:OcrTextInfo Region="1020, 792, 14, 13" Text="31" />
+                    <uc:OcrTextInfo Region="1040, 792, 58, 12" Text="countries" />
+                    <uc:OcrTextInfo Region="908, 810, 64, 12" Text="locations" />
+                  </scg:List>
+                </uc:CVCache.OcrTexts>
+              </uc:CVCache>
+            </scg:List>
+          </uc:CvCacheContainer.Caches>
+        </uc:CvCacheContainer>
+      </p:CVScope.DesignTimeCacheContainer>
+      <p:CVScope.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+          <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseAccents="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_2" Image="[Image]" Language="en" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
+        </ActivityFunc>
+      </p:CVScope.OCREngine>
+      <p:CVScope.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="881405f9-f6ec-47c7-9355-14de36ab2c9f" InformativeScreenshot="a374fd805d685d85f556c48a0acd0ea5" Selector="&lt;html app='chrome.exe' title='UiPath - Wikipedia' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </p:CVScope.Target>
+      <p:CVScope.UseLocalServer>
+        <InArgument x:TypeArguments="x:Boolean" />
+      </p:CVScope.UseLocalServer>
+    </p:CVScope>
+  </Sequence>
+</Activity>
